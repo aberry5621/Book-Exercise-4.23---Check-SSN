@@ -19,11 +19,11 @@ int main() {
     // enter ssn
     getline(cin, ssn_input);
 
-    cout << ssn_input.length() << endl;
-    
     bool test_result = 1;
     
-    if (ssn_input[3] != '-' || ssn_input[6] != '-') {
+    if ((ssn_input.length() != 11)) {
+        test_result  = 0;
+    } else if (ssn_input[3] != '-' || ssn_input[6] != '-') {
         test_result  = 0;
     } else if (!(isdigit(ssn_input[0]))) {
         test_result  = 0;
